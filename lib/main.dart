@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:clothesstore_latam/commons/widgets/custom_scroll_behavior.dart';
 import 'package:clothesstore_latam/views/home/pages/menu_home_page.dart';
 
 void main() {
@@ -11,10 +12,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
+    return MaterialApp(
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: CustomScrollBehavior(),
+          child: child!,
+        );
+      },
+      title: 'Clothesstore',
       debugShowCheckedModeBanner: false,
-      home: MenuHomePage(),
+      home: const MenuHomePage(),
     );
   }
 }
