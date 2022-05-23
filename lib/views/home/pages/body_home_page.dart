@@ -8,12 +8,14 @@ class BodyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: Colors.white,
       child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const <Widget>[
             MainBannerHome(),
             CarouselHome(),
+            ProductsHome(),
           ],
         ),
       ),
