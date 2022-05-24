@@ -9,9 +9,13 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: NestedScrollView(
-        headerSliverBuilder: (__, ___) {
-          return const <Widget>[
-            SliverAppBarHome(),
+        headerSliverBuilder: (BuildContext sliverContext, __) {
+          return <Widget>[
+            SliverOverlapAbsorber(
+              handle: NestedScrollView.sliverOverlapAbsorberHandleFor(
+                  sliverContext),
+              sliver: const SliverAppBarHome(),
+            ),
           ];
         },
         body: const TabBarView(

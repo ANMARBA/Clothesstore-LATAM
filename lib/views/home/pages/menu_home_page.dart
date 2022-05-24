@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:clothesstore_latam/views/catalogue/pages/catalogue_page.dart';
 import 'package:clothesstore_latam/views/home/pages/home_page.dart';
 
 class MenuHomePage extends StatefulWidget {
@@ -13,9 +14,7 @@ class MenuHomePage extends StatefulWidget {
 class _MenuHomePageState extends State<MenuHomePage> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _pages = <Widget>[
-    HomePage(),
-  ];
+  static const List<Widget> _pages = <Widget>[HomePage(), CataloguePage()];
 
   @override
   Widget build(BuildContext context) {

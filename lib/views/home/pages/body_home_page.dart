@@ -9,14 +9,31 @@ class BodyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const <Widget>[
-            MainBannerHome(),
-            CarouselHome(),
-            ProductsHome(),
-          ],
+      child: SafeArea(
+        top: false,
+        child: Builder(
+          builder: (BuildContext context) {
+            return CustomScrollView(
+              slivers: <Widget>[
+                SliverOverlapInjector(
+                  handle:
+                      NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+                ),
+                SliverFillRemaining(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: const <Widget>[
+                        MainBannerHome(),
+                        CarouselHome(),
+                        ProductsHome(),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            );
+          },
         ),
       ),
     );

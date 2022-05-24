@@ -6,28 +6,38 @@ class NotFoundPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(30),
-                child: Image.asset(
-                  "assets/not_found.png",
-                  fit: BoxFit.cover,
+      child: SafeArea(
+        top: false,
+        child: Builder(
+          builder: (BuildContext context) {
+            return CustomScrollView(
+              slivers: <Widget>[
+                SliverOverlapInjector(
+                  handle:
+                      NestedScrollView.sliverOverlapAbsorberHandleFor(context),
                 ),
-              ),
-              const Text(
-                'ESTA SECCIÓN ESTÁ\n EN CONSTRUCCIÓN,\n¡ESPÉRALA PRONTO! 👌',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 18,
-                  letterSpacing: .5,
-                  height: 1.5,
-                ),
-              ),
-            ],
-          ),
+                SliverFillRemaining(
+                  hasScrollBody: false,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset("assets/not_found.png", fit: BoxFit.cover),
+                      const SizedBox(height: 30),
+                      const Text(
+                        'ESTA SECCIÓN ESTÁ\n EN CONSTRUCCIÓN,\n¡ESPÉRALA PRONTO! 👌',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 18,
+                          letterSpacing: .5,
+                          height: 1.5,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            );
+          },
         ),
       ),
     );
