@@ -1,16 +1,32 @@
-# clothesstore_latam
+# Clothesstore App
+Aplicación dedicada a la venta de productos a través de internet.
 
-A new Flutter project.
+## Instrucciones de operación
 
-## Getting Started
+1. Configurar el entorno de desarrollo de Flutter.
 
-This project is a starting point for a Flutter application.
+2. Clone el código, ejecute 'flutter packages get' para instalar paquetes de terceros.
+```
+flutter packages get
+```
 
-A few resources to get you started if this is your first Flutter project:
+### Framework de terceros
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> Versión actual del SDK de Flutter **2.10**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Biblioteca | Versión |
+| --------------------------|-------------- |
+| **[provider](https://pub.dev/packages/provider)** | **^6.0.3** |
+| **[equatable](https://pub.dev/packages/equatable)** | **^2.0.3** |
+| **[http](https://pub.dev/packages/http)** | **^0.13.4** |
+| **[transparent_image](https://pub.dev/packages/transparent_image)** | **^2.0.0** |
+| **[intl](https://pub.dev/packages/intl)** | **^0.17.0** |
+| **[flutter_rating_bar](https://pub.dev/packages/flutter_rating_bar)** | **^4.0.1** |
+
+## Lista de características
+
+### Productos más Buscados
+
+### Catálogo de Productos
+
+### Buscador de Productos
